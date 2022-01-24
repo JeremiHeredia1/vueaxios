@@ -12,7 +12,7 @@
     <p>Maximum temperature: {{ result.main.temp_max }}</p>
     <p>Minimum temperature: {{ result.main.temp_min }}</p>
     <p>Humidity: {{ result.main.humidity }}</p>
-    <p></p>
+    
   </div>
   
   
