@@ -1,25 +1,31 @@
 <template>
-  <div v-if="result" class="about">
-    <h1>This is an about page Weather</h1>
-
-    <p>Country: {{result.sys.country}}</p>
-    <p>Location: {{ result.name }}<p>
-    <img :src="'http://openweathermap.org/img/w/'+result.weather[0].icon+'.png'" alt="icono-clima"/> 
-    <img :src="'http://openweathermap.org/img/w/'+result.weather[0].icon+'.png'" alt="icono-clima"/>
-    <p>Timezone:{{result.timezone}}</p>
-    <p>Temperature: {{ result.main.temp }}</p>
-    <p>Weather: {{ result.weather[0].description }}</p>   
-    <p>Maximum temperature: {{ result.main.temp_max }}</p>
-    <p>Minimum temperature: {{ result.main.temp_min }}</p>
-    <p>Humidity: {{ result.main.humidity }}</p>
-    
+  <div v-if="result" class="about" >
+    <div class="p-3 mb-2 bg-warning bg-gradiente h-auto d-inline-block text-dark"  style="h-100 d-inline-block">
+      
+      <h1>This is an about page Weather</h1>
+      
+  
+      <p>Country: {{result.sys.country}}</p>
+      <p>Location: {{ result.name }}<p>
+      <img :src="'http://openweathermap.org/img/w/'+result.weather[0].icon+'.png'" alt="icono-clima"/> 
+      <img :src="'http://openweathermap.org/img/w/'+result.weather[0].icon+'.png'" alt="icono-clima"/>
+      <p>Timezone:{{result.timezone}}</p>
+      <p>Temperature: {{ result.main.temp }}</p>
+      <p>Weather: {{ result.weather[0].description }}</p>   
+      <p>Maximum temperature: {{ result.main.temp_max }}</p>
+      <p>Minimum temperature: {{ result.main.temp_min }}</p>
+      <p>Humidity: {{ result.main.humidity }}</p>
+    </div>
+   
   </div>
+  
   
   
 </template>
 
 <script>
 import axios from "axios";
+
 export default {
   data:()=>({
     result:null
